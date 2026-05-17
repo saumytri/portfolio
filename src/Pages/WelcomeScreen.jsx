@@ -30,14 +30,14 @@ const TypewriterEffect = ({ text }) => {
 
 const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-sky-600/20 to-cyan-600/20 blur-3xl animate-pulse" />
-    <div className="absolute inset-0 bg-gradient-to-tr from-sky-600/10 via-transparent to-cyan-600/10 blur-2xl animate-float" />
+    <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-purple-600/20 blur-3xl animate-pulse" />
+    <div className="absolute inset-0 bg-gradient-to-tr from-violet-600/10 via-transparent to-fuchsia-600/10 blur-2xl animate-float" />
   </div>
 );
 
 const IconButton = ({ Icon }) => (
   <div className="relative group hover:scale-110 transition-transform duration-300">
-    <div className="absolute -inset-2 bg-gradient-to-r from-sky-600 to-cyan-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
+    <div className="absolute -inset-2 bg-gradient-to-r from-violet-600 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
     <div className="relative p-2 sm:p-3 bg-black/50 backdrop-blur-sm rounded-full border border-white/10">
       <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
     </div>
@@ -86,7 +86,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 bg-[#020c14]"
+          className="fixed inset-0 bg-[#07050f]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit="exit"
@@ -122,21 +122,21 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                     <span
                       data-aos="fade-right"
                       data-aos-delay="200"
-                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent"
                     >
                       Welcome
                     </span>{" "}
                     <span
                       data-aos="fade-right"
                       data-aos-delay="400"
-                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent"
                     >
                       To
                     </span>{" "}
                     <span
                       data-aos="fade-right"
                       data-aos-delay="600"
-                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent"
                     >
                       My
                     </span>
@@ -145,14 +145,14 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                     <span
                       data-aos="fade-up"
                       data-aos-delay="800"
-                      className="inline-block px-2 bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent"
                     >
                       Portfolio
                     </span>{" "}
                     <span
                       data-aos="fade-up"
                       data-aos-delay="1000"
-                      className="inline-block px-2 bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent"
                     >
                       Website
                     </span>
@@ -168,11 +168,11 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                 data-aos-delay="1200"
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-sky-600/20 to-cyan-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
                   <div className="relative flex items-center gap-2 text-lg sm:text-xl md:text-2xl">
-                    <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-sky-400" />
-                    <span className="bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent font-semibold">
-                      <TypewriterEffect text="Rohit Pandey" />
+                    <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-violet-400" />
+                    <span className="bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent font-semibold">
+                      <TypewriterEffect text="Saumy Tripathi" />
                     </span>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                   data-aos="fade-up"
                   data-aos-delay="1400"
                 >
-                  Full Stack Developer · Java · React.js · Node.js
+                  ML Engineer · Python · FastAPI · React.js
                 </p>
               </motion.div>
             </div>

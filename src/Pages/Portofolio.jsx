@@ -62,7 +62,7 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
         <polyline points={isShowingMore ? "18 15 12 9 6 15" : "6 9 12 15 18 9"}></polyline>
       </svg>
     </span>
-    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500/50 transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-violet-500/50 transition-all duration-300 group-hover:w-full"></span>
   </button>
 );
 
@@ -97,22 +97,21 @@ function a11yProps(index) {
   };
 }
 
-// Rohit's actual tech stack from resume
+// Saumy's actual tech stack from resume
 const techStacks = [
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", language: "Python" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", language: "Java" },
+  { icon: "javascript.svg", language: "JavaScript" },
   { icon: "html.svg", language: "HTML" },
   { icon: "css.svg", language: "CSS" },
-  { icon: "javascript.svg", language: "JavaScript" },
   { icon: "reactjs.svg", language: "ReactJS" },
   { icon: "nodejs.svg", language: "Node.js" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", language: "Java" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", language: "Python" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", language: "Spring Boot" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", language: "Express" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg", language: "FastAPI" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", language: "NumPy" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", language: "Pandas" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", language: "MongoDB" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", language: "SQL" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vite.svg", language: "Vite" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", language: "MySQL" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", language: "Bootstrap" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", language: "Git" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", language: "GitHub" },
 ];
@@ -150,7 +149,7 @@ export default function FullWidthTabs() {
 
   return (
     <div
-      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#020c14] overflow-hidden"
+      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#07050f] overflow-hidden"
       id="Portofolio"
     >
       {/* Header */}
@@ -159,7 +158,7 @@ export default function FullWidthTabs() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4]">
+        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#a855f7]">
           Portfolio Showcase
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
@@ -186,7 +185,7 @@ export default function FullWidthTabs() {
               right: 0,
               bottom: 0,
               background:
-                "linear-gradient(180deg, rgba(14, 165, 233, 0.03) 0%, rgba(6, 182, 212, 0.03) 100%)",
+                "linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, rgba(168, 85, 247, 0.03) 100%)",
               backdropFilter: "blur(10px)",
               zIndex: 0,
             },
@@ -213,7 +212,7 @@ export default function FullWidthTabs() {
                 borderRadius: "12px",
                 "&:hover": {
                   color: "#ffffff",
-                  backgroundColor: "rgba(14, 165, 233, 0.1)",
+                  backgroundColor: "rgba(139, 92, 246, 0.1)",
                   transform: "translateY(-2px)",
                   "& .lucide": {
                     transform: "scale(1.1) rotate(5deg)",
@@ -222,10 +221,10 @@ export default function FullWidthTabs() {
                 "&.Mui-selected": {
                   color: "#fff",
                   background:
-                    "linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(6, 182, 212, 0.2))",
-                  boxShadow: "0 4px 15px -3px rgba(14, 165, 233, 0.2)",
+                    "linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.2))",
+                  boxShadow: "0 4px 15px -3px rgba(139, 92, 246, 0.2)",
                   "& .lucide": {
-                    color: "#38bdf8",
+                    color: "#c084fc",
                   },
                 },
               },

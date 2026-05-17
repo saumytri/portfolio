@@ -40,30 +40,30 @@ const AnimatedBackground = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
-      <div className="absolute inset-0">
-        {/* Blob 1 — Sky Blue */}
+    <div className="absolute inset-0">
+        {/* Blob 1 — Violet */}
         <div
           ref={(ref) => (blobRefs.current[0] = ref)}
-          className="absolute top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-sky-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15"
+          className="absolute top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-violet-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15"
         />
-        {/* Blob 2 — Cyan */}
+        {/* Blob 2 — Purple */}
         <div
           ref={(ref) => (blobRefs.current[1] = ref)}
-          className="absolute top-0 -right-4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15 hidden sm:block"
+          className="absolute top-0 -right-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15 hidden sm:block"
         />
-        {/* Blob 3 — Teal/Blue */}
+        {/* Blob 3 — Fuchsia */}
         <div
           ref={(ref) => (blobRefs.current[2] = ref)}
-          className="absolute -bottom-8 left-[-40%] md:left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-[128px] opacity-25 md:opacity-10"
+          className="absolute -bottom-8 left-[-40%] md:left-20 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-screen filter blur-[128px] opacity-25 md:opacity-10"
         />
-        {/* Blob 4 — Sky */}
+        {/* Blob 4 — Indigo */}
         <div
           ref={(ref) => (blobRefs.current[3] = ref)}
-          className="absolute -bottom-10 right-20 w-96 h-96 bg-sky-400 rounded-full mix-blend-screen filter blur-[128px] opacity-15 md:opacity-8 hidden sm:block"
+          className="absolute -bottom-10 right-20 w-96 h-96 bg-indigo-400 rounded-full mix-blend-screen filter blur-[128px] opacity-15 md:opacity-8 hidden sm:block"
         />
       </div>
       {/* Subtle grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e908_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e908_1px,transparent_1px)] bg-[size:32px_32px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8b5cf608_1px,transparent_1px),linear-gradient(to_bottom,#8b5cf608_1px,transparent_1px)] bg-[size:32px_32px]" />
     </div>
   );
 };

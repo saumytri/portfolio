@@ -1,70 +1,69 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Briefcase, GraduationCap } from "lucide-react";
 
-// Experience data - Reverse Chronological Order
+// Experience data - Saumy Tripathi - Reverse Chronological Order
 const experienceData = [
   {
     id: "01",
-    year: "Jan 2024 - Present",
-    duration: "4 mos",
-    title: "Apprentice",
-    institution: "American Express",
-    description: "Working on scalable web applications and RESTful APIs using Java, React.js, and Node.js. Contributing to agile development and customer-facing interfaces.",
+    year: "Aug 2024 – May 2025",
+    duration: "9 mos",
+    title: "Machine Learning Engineer",
+    institution: "VendorsKart Pvt. Ltd.",
+    description:
+      "Built scalable data preprocessing pipelines using Python, Pandas, and SQL for automated product handling. Designed and deployed real-time ML prediction APIs using FastAPI with optimized service latency. Collaborated with cross-functional teams to integrate ML models into production systems. Improved model performance by tuning hyperparameters and feature engineering techniques.",
   },
-  {
-    id: "02",
-    year: "Feb 2023 - Jan 2024",
-    duration: "1 yr",
-    title: "Frontend Developer",
-    institution: "Indian Infotech",
-    description: "Developed and optimized responsive user interfaces using React.js and modern CSS frameworks. Improved application performance and collaborated with design teams.",
-  },
-  {
-    id: "03",
-    year: "Jun 2022 - Jan 2023",
-    duration: "8 mos",
-    title: "Artificial Intelligence Intern",
-    institution: "Acmegrade",
-    description: "Assisted in training and evaluating machine learning models. Built data preprocessing pipelines using Python and pandas for computer vision and NLP tasks.",
-  }
 ];
 
-// Education data - Reverse Chronological Order
+// Education data - Saumy Tripathi - Reverse Chronological Order
 const educationData = [
   {
     id: "01",
-    year: "2020 - 2024",
-    duration: "4 yrs",
-    title: "B.Tech in Computer Science",
-    institution: "UCEM Allahabad",
-    description: "Graduated with a CGPA of 7.99/10. Built a strong foundation in data structures, algorithms, and software engineering principles.",
+    year: "July 2025 – Present",
+    duration: "Ongoing",
+    title: "M.Tech in Artificial Intelligence",
+    institution: "NIT Agartala, Tripura",
+    description:
+      "Pursuing a Master of Technology in Artificial Intelligence, deepening expertise in advanced ML algorithms, deep learning, and AI systems engineering.",
   },
   {
     id: "02",
-    year: "2019 - 2020",
-    duration: "1 yr",
-    title: "Higher Secondary (12th)",
-    institution: "Central Board of Secondary Education",
-    description: "Completed with 80.4% aggregate. Focused on Physics, Chemistry, Mathematics, and Computer Science.",
+    year: "July 2020 – July 2024",
+    duration: "4 yrs",
+    title: "B.Tech in Computer Science & Engineering",
+    institution: "United College of Engineering and Management, Prayagraj",
+    description:
+      "Built a strong foundation in data structures, algorithms, software engineering, and object-oriented programming. Graduated with hands-on project experience in ML and web development.",
   },
   {
     id: "03",
-    year: "2017 - 2018",
+    year: "April 2019 – April 2020",
     duration: "1 yr",
-    title: "Secondary (10th)",
-    institution: "Central Board of Secondary Education",
-    description: "Completed with 75.6% aggregate. Built a strong academic foundation.",
-  }
+    title: "Intermediate (NIOS)",
+    institution: "Shree Mahaprabhu Public School",
+    description: "Completed Intermediate with focus on science and mathematics.",
+  },
+  {
+    id: "04",
+    year: "April 2017 – April 2018",
+    duration: "1 yr",
+    title: "High School (CBSE)",
+    institution: "Shree Mahaprabhu Public School",
+    description: "Completed secondary education with a strong academic foundation in CBSE curriculum.",
+  },
 ];
 
 const TimelineNode = ({ item, index, isVisible, theme }) => {
-  const isSky = theme === "sky";
-  const colorText = isSky ? "text-sky-400" : "text-emerald-400";
-  const colorBg = isSky ? "bg-sky-500" : "bg-emerald-500";
-  const colorBorder = isSky ? "border-sky-400/30" : "border-emerald-400/30";
-  const colorGlow = isSky ? "shadow-[0_0_15px_rgba(14,165,233,0.8)]" : "shadow-[0_0_15px_rgba(16,185,129,0.8)]";
-  const badgeColors = isSky ? "bg-sky-500/10 text-sky-400 border-sky-500/20" : "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
-  const gradientBg = isSky ? "from-sky-500/5 to-transparent" : "from-emerald-500/5 to-transparent";
+  const isPurple = theme === "purple";
+  const colorText = isPurple ? "text-violet-400" : "text-fuchsia-400";
+  const colorBg = isPurple ? "bg-violet-500" : "bg-fuchsia-500";
+  const colorBorder = isPurple ? "border-violet-400/30" : "border-fuchsia-400/30";
+  const colorGlow = isPurple
+    ? "shadow-[0_0_15px_rgba(139,92,246,0.8)]"
+    : "shadow-[0_0_15px_rgba(217,70,239,0.8)]";
+  const badgeColors = isPurple
+    ? "bg-violet-500/10 text-violet-400 border-violet-500/20"
+    : "bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/20";
+  const gradientBg = isPurple ? "from-violet-500/5 to-transparent" : "from-fuchsia-500/5 to-transparent";
 
   return (
     <div
@@ -147,7 +146,7 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
 
   useEffect(() => {
     if (!containerRef.current) return;
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -174,54 +173,53 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
     if (containerRef.current) {
       const { scrollTop, clientHeight, scrollHeight } = containerRef.current;
       const maxScroll = scrollHeight - clientHeight;
-      
+
       if (maxScroll <= 0) {
         setLineHeight(100);
         return;
       }
-      
+
       const scrollFraction = scrollTop / maxScroll;
       const startPercentage = (clientHeight * 0.5 / scrollHeight) * 100;
       const percentage = startPercentage + scrollFraction * (100 - startPercentage);
-      
+
       setLineHeight(percentage);
     }
   };
 
   useEffect(() => {
     handleScroll();
-    // Re-calculate on window resize
     window.addEventListener("resize", handleScroll);
     return () => window.removeEventListener("resize", handleScroll);
   }, []);
 
-  const isSky = theme === "sky";
-  const gradientLine = isSky ? "from-sky-400 via-cyan-400" : "from-emerald-400 via-teal-400";
-  const iconColor = isSky ? "text-sky-400" : "text-emerald-400";
+  const isPurple = theme === "purple";
+  const gradientLine = isPurple ? "from-violet-400 via-purple-400" : "from-fuchsia-400 via-pink-400";
+  const iconColor = isPurple ? "text-violet-400" : "text-fuchsia-400";
 
   return (
     <div className="flex flex-col h-[600px] w-full">
       {/* Column Header */}
-      <div className="flex items-center gap-3 mb-6 sticky top-0 bg-[#020c14]/90 backdrop-blur-md z-20 py-4 px-2">
+      <div className={`flex items-center gap-3 mb-6 sticky top-0 bg-[#07050f]/90 backdrop-blur-md z-20 py-4 px-2`}>
         <div className={`p-3 rounded-xl bg-white/5 border border-white/10 ${iconColor}`}>
-           <Icon className="w-6 h-6" />
+          <Icon className="w-6 h-6" />
         </div>
         <h3 className="text-2xl font-bold text-white">{title}</h3>
       </div>
-      
+
       {/* Scrollable Timeline Area */}
-      <div 
+      <div
         ref={containerRef}
         onScroll={handleScroll}
         className="flex-1 overflow-y-auto pr-2 sm:pr-4 custom-scrollbar relative"
-        style={{ scrollbarWidth: 'thin' }}
+        style={{ scrollbarWidth: "thin" }}
       >
         <div className="relative min-h-full pb-8">
           {/* Background line */}
           <div className="absolute left-[40px] top-2 bottom-2 w-0.5 bg-slate-800/50" />
-          
+
           {/* Animated colored line */}
-          <div 
+          <div
             className={`absolute left-[40px] top-2 w-0.5 transition-all duration-300 ease-out z-0 bg-gradient-to-b ${gradientLine} to-transparent`}
             style={{ height: `${lineHeight}%` }}
           />
@@ -229,8 +227,8 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
           {/* Nodes */}
           <div className="relative z-10 pt-2">
             {data.map((item, index) => (
-              <div 
-                key={item.id} 
+              <div
+                key={item.id}
                 className="timeline-node-container"
                 data-index={index}
               >
@@ -251,16 +249,16 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
 
 const Timeline = () => {
   return (
-    <section className="relative py-20 bg-[#020c14] overflow-hidden min-h-screen" id="Experience">
-      {/* Background Starfield/Particles */}
+    <section className="relative py-20 bg-[#07050f] overflow-hidden min-h-screen" id="Experience">
+      {/* Background ambient glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute w-96 h-96 bg-emerald-500/5 rounded-full blur-[100px] top-1/4 -left-20" />
-        <div className="absolute w-96 h-96 bg-sky-500/5 rounded-full blur-[100px] bottom-1/4 -right-20" />
+        <div className="absolute w-96 h-96 bg-fuchsia-500/5 rounded-full blur-[100px] top-1/4 -left-20" />
+        <div className="absolute w-96 h-96 bg-violet-500/5 rounded-full blur-[100px] bottom-1/4 -right-20" />
       </div>
 
       <div className="container mx-auto px-[5%] relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] inline-block mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] inline-block mb-4">
             Professional Journey
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg">
@@ -270,19 +268,19 @@ const Timeline = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 w-full max-w-7xl mx-auto">
           {/* Left Column: Education */}
-          <TimelineColumn 
-            title="My Education" 
-            data={educationData} 
-            icon={GraduationCap} 
-            theme="teal" 
+          <TimelineColumn
+            title="My Education"
+            data={educationData}
+            icon={GraduationCap}
+            theme="fuchsia"
           />
-          
+
           {/* Right Column: Experience */}
-          <TimelineColumn 
-            title="My Experiences" 
-            data={experienceData} 
-            icon={Briefcase} 
-            theme="sky" 
+          <TimelineColumn
+            title="My Experience"
+            data={experienceData}
+            icon={Briefcase}
+            theme="purple"
           />
         </div>
       </div>
