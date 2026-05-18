@@ -27,7 +27,7 @@ const Certificate = ({ ImgSertif, title, issuer }) => {
       </div>
       <div>
         <h3 className="text-white font-semibold text-sm leading-tight">{title || "Certificate"}</h3>
-        <p className="text-gray-400 text-xs mt-1">{issuer || "Professional Certification"}</p>
+        <p className="text-gray-300 text-xs mt-1">{issuer || "Professional Certification"}</p>
       </div>
       <div className="mt-auto pt-2 border-t border-white/5">
         <span className="text-xs text-sky-400 font-medium flex items-center gap-1">

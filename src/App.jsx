@@ -33,9 +33,9 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <footer>
             <center>
               <hr className="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
-              <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
+              <span className="block text-sm pb-4 text-gray-400 text-center dark:text-gray-300">
                 © {new Date().getFullYear()}{" "}
-                <span className="bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent font-semibold">
+                <span className="bg-gradient-to-r from-[#dc2626] to-[#ef4444] bg-clip-text text-transparent font-semibold">
                   Saumy Tripathi
                 </span>
                 . All Rights Reserved.
@@ -54,9 +54,9 @@ const ProjectPageLayout = () => (
     <footer>
       <center>
         <hr className="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
-        <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
+        <span className="block text-sm pb-4 text-gray-400 text-center dark:text-gray-300">
           © {new Date().getFullYear()}{" "}
-          <span className="bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent font-semibold">
+          <span className="bg-gradient-to-r from-[#dc2626] to-[#ef4444] bg-clip-text text-transparent font-semibold">
             Saumy Tripathi
           </span>
           . All Rights Reserved.

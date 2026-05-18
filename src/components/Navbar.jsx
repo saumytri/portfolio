@@ -64,9 +64,9 @@ const Navbar = () => {
     <nav
       className={`fixed w-full top-0 z-50 transition-all duration-500 ${
         isOpen
-          ? "bg-[#07050f] opacity-100"
+          ? "bg-[#050000] opacity-100"
           : scrolled
-          ? "bg-[#07050f]/60 backdrop-blur-xl"
+          ? "bg-[#050000]/60 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
@@ -77,7 +77,7 @@ const Navbar = () => {
             <a
               href="#Home"
               onClick={(e) => scrollToSection(e, "#Home")}
-              className="text-xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent"
+              className="text-xl font-bold bg-gradient-to-r from-[#dc2626] to-[#ef4444] bg-clip-text text-transparent"
             >
               Saumy Tripathi
             </a>
@@ -96,14 +96,14 @@ const Navbar = () => {
                   <span
                     className={`relative z-10 transition-colors duration-300 ${
                       activeSection === item.href.substring(1)
-                        ? "bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent font-semibold"
+                        ? "bg-gradient-to-r from-[#dc2626] to-[#ef4444] bg-clip-text text-transparent font-semibold"
                         : "text-[#ddd6fe] group-hover:text-white"
                     }`}
                   >
                     {item.label}
                   </span>
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] transform origin-left transition-transform duration-300 ${
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#dc2626] to-[#ef4444] transform origin-left transition-transform duration-300 ${
                       activeSection === item.href.substring(1)
                         ? "scale-x-100"
                         : "scale-x-0 group-hover:scale-x-100"
@@ -131,7 +131,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`md:hidden h-2/5 fixed inset-0 bg-[#07050f] transition-all duration-300 ease-in-out ${
+        className={`md:hidden h-2/5 fixed inset-0 bg-[#050000] transition-all duration-300 ease-in-out ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[-100%] pointer-events-none"
@@ -147,7 +147,7 @@ const Navbar = () => {
                 onClick={(e) => scrollToSection(e, item.href)}
                 className={`block px-4 py-3 text-lg font-medium transition-all duration-300 ease ${
                   activeSection === item.href.substring(1)
-                    ? "bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent font-semibold"
+                    ? "bg-gradient-to-r from-[#dc2626] to-[#ef4444] bg-clip-text text-transparent font-semibold"
                     : "text-[#ddd6fe] hover:text-white"
                 }`}
                 style={{

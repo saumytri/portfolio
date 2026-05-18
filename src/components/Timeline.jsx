@@ -54,16 +54,16 @@ const educationData = [
 
 const TimelineNode = ({ item, index, isVisible, theme }) => {
   const isPurple = theme === "purple";
-  const colorText = isPurple ? "text-violet-400" : "text-fuchsia-400";
-  const colorBg = isPurple ? "bg-violet-500" : "bg-fuchsia-500";
-  const colorBorder = isPurple ? "border-violet-400/30" : "border-fuchsia-400/30";
+  const colorText = isPurple ? "text-red-400" : "text-orange-400";
+  const colorBg = isPurple ? "bg-red-500" : "bg-orange-500";
+  const colorBorder = isPurple ? "border-red-400/30" : "border-orange-400/30";
   const colorGlow = isPurple
     ? "shadow-[0_0_15px_rgba(139,92,246,0.8)]"
     : "shadow-[0_0_15px_rgba(217,70,239,0.8)]";
   const badgeColors = isPurple
-    ? "bg-violet-500/10 text-violet-400 border-violet-500/20"
-    : "bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/20";
-  const gradientBg = isPurple ? "from-violet-500/5 to-transparent" : "from-fuchsia-500/5 to-transparent";
+    ? "bg-red-500/10 text-red-400 border-white/10"
+    : "bg-orange-500/10 text-orange-400 border-orange-500/20";
+  const gradientBg = isPurple ? "from-red-500/5 to-transparent" : "from-orange-500/5 to-transparent";
 
   return (
     <div
@@ -74,7 +74,7 @@ const TimelineNode = ({ item, index, isVisible, theme }) => {
       {/* Node Number Label */}
       <div
         className={`absolute left-0 w-[40px] text-center font-bold text-sm md:text-base transition-colors duration-500 ${
-          isVisible ? colorText : "text-slate-700"
+          isVisible ? colorText : "text-slate-300"
         }`}
       >
         {item.id}
@@ -194,13 +194,13 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
   }, []);
 
   const isPurple = theme === "purple";
-  const gradientLine = isPurple ? "from-violet-400 via-purple-400" : "from-fuchsia-400 via-pink-400";
-  const iconColor = isPurple ? "text-violet-400" : "text-fuchsia-400";
+  const gradientLine = isPurple ? "from-red-400 via-rose-400" : "from-orange-400 via-pink-400";
+  const iconColor = isPurple ? "text-red-400" : "text-orange-400";
 
   return (
     <div className="flex flex-col h-[600px] w-full">
       {/* Column Header */}
-      <div className={`flex items-center gap-3 mb-6 sticky top-0 bg-[#07050f]/90 backdrop-blur-md z-20 py-4 px-2`}>
+      <div className={`flex items-center gap-3 mb-6 sticky top-0 bg-[#050000]/90 backdrop-blur-md z-20 py-4 px-2`}>
         <div className={`p-3 rounded-xl bg-white/5 border border-white/10 ${iconColor}`}>
           <Icon className="w-6 h-6" />
         </div>
@@ -249,16 +249,16 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
 
 const Timeline = () => {
   return (
-    <section className="relative py-20 bg-[#07050f] overflow-hidden min-h-screen" id="Experience">
+    <section className="relative py-20 bg-[#050000] overflow-hidden min-h-screen" id="Experience">
       {/* Background ambient glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute w-96 h-96 bg-fuchsia-500/5 rounded-full blur-[100px] top-1/4 -left-20" />
-        <div className="absolute w-96 h-96 bg-violet-500/5 rounded-full blur-[100px] bottom-1/4 -right-20" />
+        <div className="absolute w-96 h-96 bg-orange-500/5 rounded-full blur-[100px] top-1/4 -left-20" />
+        <div className="absolute w-96 h-96 bg-red-500/5 rounded-full blur-[100px] bottom-1/4 -right-20" />
       </div>
 
       <div className="container mx-auto px-[5%] relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] inline-block mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#dc2626] to-[#ef4444] inline-block mb-4">
             Professional Journey
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg">

@@ -17,7 +17,7 @@ const socialLinks = [
     subText: "@saumytri",
     icon: Github,
     url: "https://github.com/saumytri",
-    color: "#ffffff",
+    color: "#050000",
     gradient: "from-[#333] to-[#24292e]",
   },
   {
@@ -26,8 +26,8 @@ const socialLinks = [
     subText: "saumytri07@gmail.com",
     icon: Mail,
     url: "mailto:saumytri07@gmail.com",
-    color: "#a855f7",
-    gradient: "from-[#8b5cf6] to-[#a855f7]",
+    color: "#ef4444",
+    gradient: "from-[#dc2626] to-[#ef4444]",
   },
 ];
 
@@ -35,7 +35,7 @@ const SocialLinks = () => {
   return (
     <div className="w-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 py-8 backdrop-blur-xl">
       <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-        <span className="inline-block w-8 h-1 bg-violet-500 rounded-full"></span>
+        <span className="inline-block w-8 h-1 bg-red-500 rounded-full"></span>
         Connect With Me
       </h3>
 
@@ -71,17 +71,17 @@ const SocialLinks = () => {
               </div>
 
               <div className="flex flex-col">
-                <span className="text-lg font-bold pt-[0.2rem] text-gray-200 tracking-tight leading-none group-hover:text-white transition-colors duration-300">
+                <span className="text-lg font-bold pt-[0.2rem] text-gray-100 tracking-tight leading-none group-hover:text-white transition-colors duration-300">
                   {link.displayName}
                 </span>
-                <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                <span className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   {link.subText}
                 </span>
               </div>
             </div>
 
             <ExternalLink
-              className="relative w-5 h-5 text-gray-500 group-hover:text-white
+              className="relative w-5 h-5 text-gray-400 group-hover:text-white
                          opacity-0 group-hover:opacity-100 transition-all duration-300
                          transform group-hover:translate-x-0 -translate-x-1"
             />

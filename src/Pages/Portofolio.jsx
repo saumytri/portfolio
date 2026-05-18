@@ -32,7 +32,7 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
       items-center
       gap-2
       bg-white/5
-      hover:bg-white/10
+      hover:bg-white/5
       rounded-md
       border
       border-white/10
@@ -62,7 +62,7 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
         <polyline points={isShowingMore ? "18 15 12 9 6 15" : "6 9 12 15 18 9"}></polyline>
       </svg>
     </span>
-    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-violet-500/50 transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500/50 transition-all duration-300 group-hover:w-full"></span>
   </button>
 );
 
@@ -149,7 +149,7 @@ export default function FullWidthTabs() {
 
   return (
     <div
-      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#07050f] overflow-hidden"
+      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#050000] overflow-hidden"
       id="Portofolio"
     >
       {/* Header */}
@@ -158,7 +158,7 @@ export default function FullWidthTabs() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#a855f7]">
+        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#dc2626] to-[#ef4444]">
           Portfolio Showcase
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
@@ -211,7 +211,7 @@ export default function FullWidthTabs() {
                 margin: "8px",
                 borderRadius: "12px",
                 "&:hover": {
-                  color: "#ffffff",
+                  color: "#050000",
                   backgroundColor: "rgba(139, 92, 246, 0.1)",
                   transform: "translateY(-2px)",
                   "& .lucide": {

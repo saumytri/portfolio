@@ -41,7 +41,7 @@ const ContactPage = () => {
         title: "Validation Error",
         text: error,
         icon: "warning",
-        confirmButtonColor: "#8b5cf6",
+        confirmButtonColor: "#dc2626",
       });
       return;
     }
@@ -98,7 +98,7 @@ const ContactPage = () => {
         title: "Message Sent! 🎉",
         text: "Thanks for reaching out! I'll get back to you soon.",
         icon: "success",
-        confirmButtonColor: "#8b5cf6",
+        confirmButtonColor: "#dc2626",
         timer: 3000,
         timerProgressBar: true,
       });
@@ -110,7 +110,7 @@ const ContactPage = () => {
         title: "Failed to Send",
         text: "Something went wrong. Please try again later or contact me via LinkedIn.",
         icon: "error",
-        confirmButtonColor: "#8b5cf6",
+        confirmButtonColor: "#dc2626",
       });
     } finally {
       setIsSubmitting(false);
@@ -123,7 +123,7 @@ const ContactPage = () => {
         <h2
           data-aos="fade-down"
           data-aos-duration="1000"
-          className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#a855f7]"
+          className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#dc2626] to-[#ef4444]"
         >
           Contact Me
         </h2>
@@ -145,24 +145,24 @@ const ContactPage = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1200"
-            className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#8b5cf6]/10"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#dc2626]/10"
           >
             <div className="flex justify-between items-start mb-8">
               <div>
-                <h2 className="text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#a855f7]">
+                <h2 className="text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#dc2626] to-[#ef4444]">
                   Get in Touch
                 </h2>
-                <p className="text-gray-400">
+                <p className="text-gray-300">
                   Have something to discuss? Send me a message and let's talk.
                 </p>
               </div>
-              <Share2 className="w-10 h-10 text-[#8b5cf6] opacity-50" />
+              <Share2 className="w-10 h-10 text-[#dc2626] opacity-50" />
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               {/* Name */}
               <div data-aos="fade-up" data-aos-delay="100" className="relative group">
-                <User className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#8b5cf6] transition-colors" />
+                <User className="absolute left-4 top-4 w-5 h-5 text-gray-300 group-focus-within:text-[#dc2626] transition-colors" />
                 <input
                   type="text"
                   name="name"
@@ -173,13 +173,13 @@ const ContactPage = () => {
                   disabled={isSubmitting}
                   minLength={2}
                   required
-                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/40 transition-all duration-300 hover:border-[#8b5cf6]/30 disabled:opacity-50"
+                  className="w-full p-4 pl-12 bg-white/5 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#dc2626]/40 transition-all duration-300 hover:border-[#dc2626]/30 disabled:opacity-50"
                 />
               </div>
 
               {/* Email */}
               <div data-aos="fade-up" data-aos-delay="200" className="relative group">
-                <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#8b5cf6] transition-colors" />
+                <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-300 group-focus-within:text-[#dc2626] transition-colors" />
                 <input
                   type="email"
                   name="email"
@@ -189,13 +189,13 @@ const ContactPage = () => {
                   onChange={handleChange}
                   disabled={isSubmitting}
                   required
-                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/40 transition-all duration-300 hover:border-[#8b5cf6]/30 disabled:opacity-50"
+                  className="w-full p-4 pl-12 bg-white/5 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#dc2626]/40 transition-all duration-300 hover:border-[#dc2626]/30 disabled:opacity-50"
                 />
               </div>
 
               {/* Message */}
               <div data-aos="fade-up" data-aos-delay="300" className="relative group">
-                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#8b5cf6] transition-colors" />
+                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-300 group-focus-within:text-[#dc2626] transition-colors" />
                 <textarea
                   name="message"
                   id="contact-message"
@@ -205,7 +205,7 @@ const ContactPage = () => {
                   disabled={isSubmitting}
                   minLength={10}
                   required
-                  className="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/40 transition-all duration-300 hover:border-[#8b5cf6]/30 h-[9.9rem] disabled:opacity-50"
+                  className="w-full resize-none p-4 pl-12 bg-white/5 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#dc2626]/40 transition-all duration-300 hover:border-[#dc2626]/30 h-[9.9rem] disabled:opacity-50"
                 />
               </div>
 
@@ -215,7 +215,7 @@ const ContactPage = () => {
                 type="submit"
                 id="contact-submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#8b5cf6]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full bg-gradient-to-r from-[#dc2626] to-[#ef4444] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#dc2626]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send className="w-5 h-5" />
                 {isSubmitting ? "Sending..." : "Send Message"}

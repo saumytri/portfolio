@@ -7,7 +7,7 @@ const ProjectCardModal = ({ title, description, link }) => {
   return (
     <>
       <button
-        className="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-colors duration-200"
+        className="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/5 text-white/90 transition-colors duration-200"
         onClick={() => setIsOpen(true)}
       >
         <span className="text-sm">Details</span>
@@ -30,13 +30,13 @@ const ProjectCardModal = ({ title, description, link }) => {
               <Eye className="h-5 w-5" />
             </button>
             <h2 className="mb-4 text-2xl font-bold">{title}</h2>
-            <p className="mb-6 text-gray-400">{description}</p>
+            <p className="mb-6 text-gray-300">{description}</p>
             <div className="flex justify-end space-x-4">
               <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md bg-blue-600 px-4 py-2 font-medium hover:bg-blue-700 transition-colors duration-200"
+                className="rounded-md bg-red-600 px-4 py-2 font-medium hover:bg-red-700 transition-colors duration-200"
               >
                 Live Demo <ExternalLink className="ml-2 inline-block h-5 w-5" />
               </a>
