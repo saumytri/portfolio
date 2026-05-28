@@ -48,7 +48,7 @@ const ProfileImage = memo(() => (
           <div className="absolute inset-0 bg-gradient-to-t from-red-500/20 via-transparent to-rose-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
 
           <img
-            src="/saumy-profile.jpeg"
+            src="saumy-profile.jpeg"
             alt="Saumy Tripathi - ML Engineer & Full Stack Developer"
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
             loading="lazy"
@@ -201,7 +201,7 @@ const AboutPage = () => {
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
               <a
-                href="/saumy-resume.pdf"
+                href="saumy-resume.pdf"
                 download="Saumy_Tripathi_Resume.pdf"
                 className="w-full lg:w-auto"
               >
